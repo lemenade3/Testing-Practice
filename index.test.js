@@ -125,3 +125,23 @@ test('caeserCipher ignores numbers', () => {
 test('analyzeArray returns an object', () => {
     expect(typeof analyseArray([1,2,3,4]) === 'object').toBeTruthy()
 })
+
+test('Returns array average', () => {
+    expect(analyseArray([3,5,9,7]).average).toBe(6)
+})
+
+test('Returns array average', () => {
+    expect(analyseArray([3,5,9,7]).average).toBe(6)
+})
+
+test('Returns array minimum', () => {
+    expect(analyseArray([4,8,1,5,9,7]).min).toBe(1)
+})
+
+test('Returns array maximum', () => {
+    expect(analyseArray([4,8,1,5,9,7]).max).toBe(9)
+})
+
+test('Returns array length', () => {
+    expect(analyseArray([4,8,1,5,9,7]).length).toBe(6)
+})

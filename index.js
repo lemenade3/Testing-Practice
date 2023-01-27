@@ -80,9 +80,47 @@ const calculator = {
 }
 
 function analyseArray(array) {
-    let object = {}
+    let object = {
+        average: null,
+        min: null,
+        max: null,
+        length: null
+    }
+
+    // Returns average of array
+
+    let sum = array.reduce((accumulator, currentValue) => accumulator + currentValue)
+    object.average = sum / array.length
+
+    // Returns min of array
+
+    let min = array[0]
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i]
+        }
+    }
+    object.min = min
+
+    // Returns max of array
+
+    let max = array[0]
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    object.max = max
+
+    // Returns length of array
+
+    object.length = array.length
+
     return object
 }
+
 
 
 export {capitalize, reverseString, calculator, analyseArray}
